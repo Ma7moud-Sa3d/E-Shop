@@ -1,3 +1,4 @@
+import heroImage from './Hero-image.png'
 export const categories = [
   "Electronics",
   "Fashio",
@@ -6,3 +7,4 @@ export const categories = [
   "Sports",
   "Automotive",
 ];
+export {heroImage}
