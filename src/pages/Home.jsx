@@ -1,5 +1,7 @@
 import React from 'react'
 import {categories, heroImage} from '../assets/mockData'
+import InfoSection from '../components/InfoSection'
+import Category from '../components/Category'
 
 
 const Home = () => {
@@ -31,6 +33,8 @@ const Home = () => {
           </div>
 
       </div>
+      <InfoSection />
+      <Category />
     </div>
   )
 }
