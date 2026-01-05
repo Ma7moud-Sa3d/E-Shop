@@ -3,6 +3,8 @@ import Navbar from './components/Navbar'
 import { createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider } from 'react-router-dom'
 import Footer from './components/Footer'
 import Home from './pages/Home'
+import { productsAPI } from './API/productsAPI'
+import Shop from './pages/Shop'
 
 const Layout = ()=>{
     return (
@@ -21,7 +23,8 @@ const App = () => {
     <Route>
       {/* layout routes */}
       <Route to='/' element={<Layout/>}>
-        <Route index element={<Home />}></Route>
+        <Route index element={<Home loader={productsAPI}/>}></Route>
+        <Route path='/shop' element={<Shop/>}></Route>
       </Route>
 
     </Route>
