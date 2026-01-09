@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import me from '../assets/me.jpg'
 
 const Contact = () => {
   return (
@@ -27,12 +28,15 @@ const Contact = () => {
               <li><strong>Address:</strong> Giza, Egypt</li>
             </ul>
             
-            <div className='flex mt-4 gap-5 text-3xl'>
+            <div className='flex mt-4 gap-5 text-3xl items-center'>
               <a href="https://www.linkedin.com/in/mahmoud-saad8" target='_blank'>
               <FaLinkedin className='text-blue-600 cursor-pointer' />
               </a>
               <a href="https://github.com/Ma7moud-Sa3d" target='_blank'>
               <FaGithub className='cursor-pointer'/>
+              </a>
+              <a href="https://ma7moud-sa3d.github.io/Portfolio/" target='_blank'>
+              <img src={me} alt="" className='h-8 w-8 rounded-full '/>
               </a>
             </div>
           </div>
