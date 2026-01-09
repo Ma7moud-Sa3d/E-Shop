@@ -71,8 +71,8 @@ const Navbar = () => {
         <div className='capitalize flex justify-center text-sm font-bold space-x-4 py-3'>
           <Link to='/' className='hover:underline'>home</Link>
           <Link to='/shop' className='hover:underline'>shop</Link>
-          <Link to='/' className='hover:underline'>contact</Link>
-          <Link to='/' className='hover:underline'>about</Link>
+          <Link to='/contact' className='hover:underline'>contact</Link>
+          <Link to='/about' className='hover:underline'>about</Link>
         </div>
       </nav>
 

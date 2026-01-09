@@ -7,6 +7,8 @@ import { productsAPI } from './API/productsAPI'
 import Shop from './pages/Shop'
 import Cart from './pages/Cart'
 import ProductDetails from './components/ProductDetails'
+import About from './pages/About'
+import Contact from './pages/Contact'
 
 const Layout = ()=>{
     return (
