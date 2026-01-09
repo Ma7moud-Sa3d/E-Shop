@@ -39,7 +39,6 @@ The project provides a complete shopping experience including product listing, p
 
 ## 📂 Project Structure
 
-```
 
 src/
 │── components/
