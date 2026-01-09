@@ -41,9 +41,14 @@ The project provides a complete shopping experience including product listing, p
 
 
 src/
+│── API
+│── assets
 │── components/
 │   ├── Navbar.jsx
 │   ├── ProductCard.jsx
+│   ├── Ctaegory.jsx
+│   ├── Footer.jsx
+│   ├── InfoSection.jsx
 │   ├── ProductDetails.jsx
 │   ├── Login.jsx
 │   └── Register.jsx
@@ -57,10 +62,9 @@ src/
 │
 │── redux/
 │   ├── cartSlice.js
+│   ├── productSlice.js
 │   └── store.js
 │
-│── layout/
-│   └── Layout.jsx
 │
 │── App.jsx
 │── main.jsx
@@ -85,13 +89,13 @@ This project uses **Fake Store API** for product data:
 
 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/your-username/e-shop.git
+git clone https://github.com/Ma7moud-Sa3d/E-Shop.git
 ````
 
 2️⃣ Navigate to the project folder
 
 ```bash
-cd e-shop
+cd E-Shop
 ```
 
 3️⃣ Install dependencies
@@ -163,7 +167,7 @@ This project is open-source and available under the **MIT License**.
 ## 👨‍💻 Author
 
 **Mahmoud**
-Frontend Developer
+Software Engineer
 🇪🇬 Egypt
 
 ---
