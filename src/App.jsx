@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import { productsAPI } from './API/productsAPI'
 import Shop from './pages/Shop'
 import Cart from './pages/Cart'
+import ProductDetails from './components/ProductDetails'
 
 const Layout = ()=>{
     return (
@@ -24,9 +25,13 @@ const App = () => {
     <Route>
       {/* layout routes */}
       <Route to='/' element={<Layout/>}>
-        <Route index element={<Home loader={productsAPI}/>}></Route>
+        <Route index element={<Home />}></Route>
         <Route path='/shop' element={<Shop/>}></Route>
         <Route path='/cart' element={<Cart/>}></Route>
+        <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="about" element={<About />} />
+<Route path="contact" element={<Contact />} />
+
       </Route>
 
     </Route>

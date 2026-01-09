@@ -2,17 +2,18 @@ import React from 'react'
 import { FaStar } from 'react-icons/fa'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../redux/cartSlice';
+import ProductDetails from './ProductDetails';
+import { Link } from 'react-router-dom'
 
 const ProductCard = ({ products }) => {
 
   const disPatch = useDispatch();
-  // const handleAddToCart = ()=> {
 
-  // }
 
   return (
+    <Link to={`/product/${products.id}`}>
       <div className='bg-white shadow-md relative border hover:scale-105 transition duration-500 ease-in-out cursor-pointer rounded-md mt-3'>
-        <img src={products.image} alt={products.title} className='w-full h-48 object-contain my-4'/>
+        <img src={products.image} alt={products.title} className='w-full h-48 object-contain my-4' />
         <h3 className='text-xl font-bold ml-2'>{products.title}</h3>
         <p className='text-gray-500 font-semibold ml-2'>${products.price}</p>
         <div className='flex items-center gap-1 my-2 ml-2'>
@@ -23,18 +24,22 @@ const ProductCard = ({ products }) => {
         </div>
         <div className='absolute bottom-4 right-2 bg-red-600 w-8 h-8 flex items-center justify-center
           group text-white text-sm rounded-full hover:w-32 hover:bg-red-700 transition-all duration-500 '
-          onClick={()=> disPatch(addToCart({
-            id: products.id,
-            title: products.title,
-            price: products.price,
-            image: products.image,
-            quantity: 1
-          }))}>
+          onClick={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            disPatch(addToCart({
+              id: products.id,
+              title: products.title,
+              price: products.price,
+              image: products.image,
+              quantity: 1
+            }))
+          }}>
           <span className='group-hover:hidden'>+</span>
           <span className='hidden group-hover:block'>Add to cart</span>
         </div>
       </div>
-
+    </Link>
   )
 }
 
