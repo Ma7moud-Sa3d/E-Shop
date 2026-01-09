@@ -78,7 +78,8 @@ const Cart = () => {
             ))}
             {
               products.length > 1 ?
-              <button className='text-lg text-white bg-red-600 mx-60 rounded-xl py-2 cursor-pointer hover:bg-red-900 duration-500'>Clear Products</button> : <></> 
+              <button className='text-lg text-white bg-red-600 mx-60 rounded-xl py-2 cursor-pointer hover:bg-red-900 duration-500'
+              onClick={()=> dispach(clearItems())}>Clear Products</button> : <></> 
             }
           </ul>
         </div>
