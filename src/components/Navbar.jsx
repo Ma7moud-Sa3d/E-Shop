@@ -1,10 +1,12 @@
 import React from 'react'
 import { FaSearch, FaShoppingCart, FaUser } from 'react-icons/fa'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+  const countProducts = useSelector(state => state.cart.products)
   return (
-    <nav className='bg-white shadow-md'>
+    <nav className='bg-white shadow-lg border-b-2'>
       <div className='container mx-auto px-4 md:px-16 lg:px-24 py-4 flex justify-between items-center'>
         <section className='text-lg font-bold'>
           <Link to='/'>E-SHOP</Link>
@@ -19,8 +21,13 @@ const Navbar = () => {
         </section>
 
         <section className='flex items-center space-x-4'>
-          <Link to='/cart'>
+          <Link to='/cart' className='relative'>
             <FaShoppingCart className='text-lg' />
+            {countProducts.length > 0 ? (
+              <span className='absolute top-0 text-xs w-3 left-3 bg-red-600 rounded-full flex justify-center items-center text-white '>
+                {countProducts.length}
+              </span>
+            ): <></>}
           </Link>
           <button className='hidden md:block'>
             Login | Register

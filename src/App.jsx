@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import { productsAPI } from './API/productsAPI'
 import Shop from './pages/Shop'
+import Cart from './pages/Cart'
 
 const Layout = ()=>{
     return (
@@ -25,6 +26,7 @@ const App = () => {
       <Route to='/' element={<Layout/>}>
         <Route index element={<Home loader={productsAPI}/>}></Route>
         <Route path='/shop' element={<Shop/>}></Route>
+        <Route path='/cart' element={<Cart/>}></Route>
       </Route>
 
     </Route>
